@@ -1,0 +1,334 @@
+#intro {
+    height: 100vh;
+}
+.intro_inner {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.intro_title {
+    color: var(--black100);
+    font-size: 8vw;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.3vw;
+    white-space: nowrap;
+}
+
+.intro_text {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background-color: #0b0c10;
+    color: #fff;
+    cursor: cell;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.projector_unit {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    height: 150px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.reel_box {
+    position: absolute;
+    border-radius: 50%;
+    padding: 3px;
+    border: 3px dashed rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    background-color: #121212;
+    z-index: 2;
+    filter: grayscale(100%);
+    transition:
+        filter 0.3s,
+        box-shadow 0.3s;
+}
+
+.reel_back {
+    width: 75px;
+    height: 75px;
+    top: 15px;
+    left: 5px;
+    animation: rotateProjectorReverse 12s linear infinite;
+}
+
+.reel_front {
+    width: 105px;
+    height: 105px;
+    top: 10px;
+    left: 90px;
+    animation: rotateProjector 15s linear infinite;
+}
+
+.reel_line {
+    position: absolute;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        #ffffff 0px,
+        #ffffff 5px,
+        transparent 5px,
+        transparent 9px
+    );
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.reel_line.top_line {
+    width: 95px;
+    top: 18px;
+    left: 40px;
+    transform: rotate(-3deg);
+}
+
+.reel_line.bottom_line {
+    width: 95px;
+    top: 82px;
+    left: 40px;
+    transform: rotate(11deg);
+}
+
+.reel_box .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.reel_front .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: keepImageUpright 15s linear infinite;
+}
+
+.reel_back .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: keepImageUprightReverse 12s linear infinite;
+}
+
+.reel_spoke {
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.projector_unit {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 150px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.projector_unit .lens {
+    position: absolute;
+    left: 190px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 24px; /* 렌즈 세로 크기 */
+    background: linear-gradient(90deg, #444, #111);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(229, 9, 20, 0.9);
+    z-index: 4;
+}
+
+.projection_beam {
+    position: absolute;
+    left: 15.5%;
+    top: 0;
+    width: 72%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 240, 230, 0.12) 40%,
+        rgba(255, 255, 255, 0.02) 100%
+    );
+    clip-path: polygon(0% 47.5%, 100% 10%, 100% 90%, 0% 52.5%);
+    z-index: 5;
+    pointer-events: none;
+    animation: realBeamFlicker 0.15s infinite alternate;
+}
+
+.intro_text .text {
+    position: relative;
+    left: 12%;
+    font-size: 3.2vw;
+    line-height: 1.2;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    z-index: 20;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.9),
+        0 0 20px rgba(229, 9, 20, 0.7),
+        0 0 40px rgba(229, 9, 20, 0.4);
+    transition: opacity 0.3s ease;
+}
+
+@keyframes rotateProjector {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateProjectorReverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes keepImageUpright {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes keepImageUprightReverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes realBeamFlicker {
+    0% {
+        opacity: 0.75;
+        transform: scaleY(0.99);
+    }
+    100% {
+        opacity: 0.95;
+        transform: scaleY(1.01);
+    }
+}
+
+.intro_text:hover .text {
+    opacity: 0.4;
+}
+.intro_text:hover .reel_box {
+    filter: grayscale(0);
+    box-shadow: 0 0 18px rgba(229, 9, 20, 0.5);
+}
+
+/* line */
+.intro_lines {
+    width: 100%;
+}
+.intro_lines .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 0.5vw;
+    background-color: var(--black100);
+    background: url(../../img/eva-darron-oCdVtGFeDC0-unsplash.jpg) center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.intro_lines .bottom .line {
+    margin-top: 0.5vw;
+    display: none;
+}
+.intro_lines .line:nth-child(1) {
+    height: 1px;
+}
+.intro_lines .line:nth-child(2) {
+    height: 2px;
+}
+.intro_lines .line:nth-child(3) {
+    height: 5px;
+}
+.intro_lines .line:nth-child(4) {
+    height: 9px;
+}
+.intro_lines .line:nth-child(5) {
+    height: 13px;
+}
+.intro_lines .line:nth-child(6) {
+    height: 17px;
+}
+.intro_lines .line:nth-child(7) {
+    height: 25px;
+}
+.intro_lines.bottom .line:nth-child(1) {
+    height: 25px;
+}
+.intro_lines.bottom .line:nth-child(2) {
+    height: 17px;
+}
+.intro_lines.bottom .line:nth-child(3) {
+    height: 13px;
+}
+.intro_lines.bottom .line:nth-child(4) {
+    height: 9px;
+}
+.intro_lines.bottom .line:nth-child(5) {
+    height: 5px;
+}
+.intro_lines.bottom .line:nth-child(6) {
+    height: 2px;
+}
+.intro_lines.bottom .line:nth-child(7) {
+    height: 1px;
+}
+
+@media (max-width: 800px) {
+    .intro_inner {
+        justify-content: center;
+    }
+    .intro_text .text {
+        font-size: 24px;
+        left: 0;
+    }
+    .projector_unit,
+    .projection_beam {
+        display: none;
+    }
+    .intro_lines.bottom {
+        display: block;
+    }
+}
+
+@media (max-width: 360px) {
+    .intro_title {
+        display: none;
+    }
+}

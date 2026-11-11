@@ -1,0 +1,122 @@
+#port {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+.port_inner {
+    padding: 16px;
+}
+.port_title {
+    width: 100%;
+    font-size: 4vw;
+    font-family: var(--mainEng-font);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--black100);
+    border-bottom: 0.4vw solid var(--black100);
+    margin-bottom: 16px;
+}
+.port_wrap {
+    width: 5000px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.port_item {
+    width: 500px;
+    height: 70vh;
+    background-color: var(--subBg500);
+    padding: 2.5rem;
+    margin-right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.port_item.p1 {
+    background-color: var(--subBg100);
+}
+.port_item.p2 {
+    background-color: var(--subBg200);
+}
+.port_item.p3 {
+    background-color: var(--subBg300);
+}
+.port_item.p4 {
+    background-color: var(--subBg400);
+}
+.port_item.p5 {
+    background-color: var(--subBg500);
+}
+.port_item.p6 {
+    background-color: var(--subBg100);
+}
+.port_item.p7 {
+    background-color: var(--subBg200);
+}
+.port_item.p8 {
+    background-color: var(--subBg300);
+}
+.port_item.p9 {
+    background-color: var(--subBg400);
+}
+.port_item.p10 {
+    background-color: var(--subBg500);
+}
+.port_item .num {
+    font-size: 2rem;
+    font-family: var(--mainNum-font);
+}
+.port_item a.img img {
+    display: block;
+    margin-top: -20px;
+    transition: margin-top 0.3s;
+    border-radius: 5px;
+}
+.port_item:hover a.img img {
+    margin-top: 0;
+    filter: grayscale(100%);
+}
+.port_item .title {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    color: var(--black100);
+    border-bottom: 2px solid var(--black100);
+    margin-bottom: 1rem;
+}
+.port_item .desc {
+    font-size: 1rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; /* 원하는 줄 수 */
+}
+.port_item a.site {
+    display: block;
+    border: 1px solid var(--black100);
+    padding: 0.625rem 1.5rem;
+    text-align: center;
+
+    margin-top: auto;
+}
+
+@media (max-width: 800px) {
+    .port_title {
+        height: auto;
+        margin-bottom: 16px;
+        font-size: 30px;
+        background-color: var(--mainBg-color);
+    }
+    .port_item {
+        width: 400px;
+        height: auto;
+        padding: 40px 30px;
+
+        .port_item a.img {
+            height: 180px; /* 모바일 화면에서의 사진 높이 조절 (선택사항) */
+        }
+    }
+}

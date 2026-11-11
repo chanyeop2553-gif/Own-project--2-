@@ -1,0 +1,224 @@
+#site {
+}
+.site_inner {
+    padding: 16px;
+}
+.site_title {
+    width: 48%;
+    height: 5vw;
+    position: sticky;
+    top: 70px;
+    left: 0;
+    font-size: 4vw;
+    font-family: var(--mainNum-font);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--black100);
+    border-bottom: 0.4vw solid var(--black100);
+}
+.site_wrap {
+}
+.site_item {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    left: 0;
+}
+.site_item.s1 {
+    background-color: var (--subBg100);
+    background: url(../../img/MNT_Garden-Condo_13.jpg) center;
+    background-size: cover;
+    top: 180px;
+}
+.site_item.s2 {
+    background-color: var (--subBg200);
+    background: url(../../img/9ca12330-024e-44a2-디럭스\ 뷰jpg.jpg) center;
+    background-size: cover;
+    top: 200px;
+}
+.site_item.s3 {
+    background-color: var (--subBg300);
+    background: url(../../img/2022121509553452596_이그제티큐브\ 뷰.jpg) center;
+    background-size: cover;
+    top: 220px;
+}
+.site_item.s4 {
+    background-color: var (--subBg400);
+    background: url(../../img/Sofitel-Ambassador-스위트\ 룸.jpg) center;
+    background-size: cover;
+    top: 240px;
+}
+
+.site_item.s5 {
+    background-color: var(--subBg500);
+    background: url(../../img/영화관\ 배경\ .jpg) center;
+    background-size: cover;
+    position: relative;
+}
+
+.site_item.s5::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 12, 0.45);
+    z-index: 1;
+}
+
+.site_item.s5 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.site_item.s5 .num {
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.site_item.s5 .text div:nth-child(1) {
+    color: #ff334b;
+    font-size: 3.5vw;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 10px rgba(255, 51, 75, 0.8),
+        0 0 20px rgba(255, 51, 75, 0.4);
+}
+
+.site_item.s5 .text div:nth-child(2) {
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(255, 51, 75, 0.8);
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.site_item.s5 h3 {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 400;
+}
+
+.site_item.s5 .btn a {
+    color: #ffffff;
+    border: 1px solid rgba(255, 51, 75, 0.6);
+    background: rgba(20, 20, 25, 0.6);
+    transition: all 0.3s ease;
+}
+
+.site_item.s5 .btn a:hover {
+    background: #ff334b;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 51, 75, 0.8);
+}
+
+.site_item.s5 .info span {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.site_item .num {
+    position: absolute;
+    left: 1vw;
+    top: 2vw;
+
+    font-size: 3vw;
+    line-height: 1;
+    font-weight: 800;
+    color: var(--black);
+    font-family: var(--mainNum-font);
+}
+.site_item .text {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.site_item .text > div {
+    font-size: 3vw;
+    line-height: 1;
+    color: var(--black);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.site_item .title {
+    font-family: var(----mainKor-font);
+    margin-bottom: 1rem;
+}
+
+.site_item h3 {
+    font-size: 1vw;
+    font-weight: 900;
+    color: var(--white);
+}
+
+.site_item .btn {
+}
+.site_item .btn a {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: var(--white);
+    font-size: 1vw;
+    font-weight: 700;
+    padding: 0 2px;
+}
+.site_item .btn a:hover {
+    color: var(--black);
+}
+.site_item .info {
+    width: 98%;
+    position: absolute;
+    bottom: 3%;
+    color: var(--black);
+    border-top: 1px solid var(--white100);
+    border-bottom: 1px solid var(--white100);
+    display: flex;
+    justify-content: space-between;
+}
+.site_item .info span {
+    font-family: var(--mainKor-font);
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+    .site_title {
+        width: 100%;
+        margin-bottom: 10vw;
+        font-size: 30px;
+        height: auto;
+        margin-bottom: 10vw;
+        font-size: 30px;
+        background-color: var(--mainBg-color);
+        z-index: 100;
+    }
+    .site_item.s1 {
+        top: 140px;
+    }
+    .site_item.s1 {
+        top: 160px;
+    }
+    .site_item.s1 {
+        top: 180px;
+    }
+    .site_item.s1 {
+        top: 200px;
+    }
+    .site_item .num {
+        font-size: 80px;
+        left: 20px;
+        top: 20px;
+    }
+    .site_item .text > div {
+        font-size: 24px;
+    }
+    .site_item .info {
+        width: 90%;
+        flex-direction: column;
+        padding: 5px 0;
+    }
+}

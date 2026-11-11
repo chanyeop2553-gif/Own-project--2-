@@ -1,0 +1,213 @@
+#Cinema {
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#Cinema .site_inner {
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+#Cinema .cinema_header {
+    margin-bottom: 40px;
+    text-align: left;
+    position: relative;
+}
+
+#Cinema .cinema_header h2 {
+    font-size: 4vw;
+    font-weight: 900;
+    color: #e50914;
+    margin: 0;
+    padding-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+#Cinema .cinema_header h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 4px;
+    background-color: #e50914;
+}
+
+#Cinema .slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+#Cinema .slider .swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#Cinema .slider .swiper-wrapper {
+    width: 100%;
+    height: 600px;
+}
+
+/* 슬라이드 1 ~ 8 배경 매핑 */
+#Cinema .slider .ss1 {
+    height: inherit;
+    background: url(../../img/main_slider01.webp) no-repeat center top;
+    background-size: cover;
+}
+#Cinema .slider .ss2 {
+    height: inherit;
+    background: url(../../img/main_slider02.webp) no-repeat center top;
+    background-size: cover;
+}
+#Cinema .slider .ss3 {
+    height: inherit;
+    background: url(../../img/main_slider03.webp) no-repeat center top;
+    background-size: cover;
+}
+#Cinema .slider .ss4 {
+    height: inherit;
+    background: url(../../img/main_slider04.webp) no-repeat center top;
+    background-size: cover;
+}
+#Cinema .slider .ss5 {
+    height: inherit;
+    background: url(../../img/main_slider05.webp) no-repeat center top;
+    background-size: cover;
+}
+#Cinema .slider .ss6 {
+    height: inherit;
+    background: url(../../img/main_slider06.webp) no-repeat center top;
+    background-size: cover;
+}
+#Cinema .slider .ss7 {
+    height: inherit;
+    background: url(../../img/main_slider07.webp) no-repeat center top;
+    background-size: cover;
+}
+#Cinema .slider .ss8 {
+    height: inherit;
+    background: url(../../img/main_slider08.webp) no-repeat center top;
+    background-size: cover;
+}
+
+#Cinema .slider h2 {
+    font-size: 62px;
+    font-weight: 500;
+    margin-top: 200px;
+    line-height: 1.2;
+    color: #fff;
+    position: relative;
+    margin-left: 70px;
+}
+
+#Cinema .slider h2 em {
+    display: block;
+    font-weight: 100;
+    font-size: 59px;
+}
+
+#Cinema .slider h2::after {
+    content: "";
+    width: 420px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+}
+
+#Cinema .slider p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    padding-top: 50px;
+    margin-left: 70px;
+}
+
+@media (max-width: 960px) {
+    #Cinema .slider .swiper-wrapper {
+        height: 500px;
+    }
+    #Cinema .slider h2 {
+        font-size: 37px;
+        margin-top: 160px;
+        margin-left: 30px;
+    }
+    #Cinema .slider h2 em {
+        font-size: 34px;
+    }
+    #Cinema .slider h2::after {
+        width: 250px;
+        bottom: -15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #Cinema .slider .swiper-wrapper {
+        height: 400px;
+    }
+    #Cinema .slider h2 {
+        font-size: 30px;
+        margin-top: 150px;
+        margin-left: 10px;
+    }
+    #Cinema .slider h2 em {
+        font-size: 25px;
+    }
+    #Cinema .slider h2::after {
+        width: 220px;
+        bottom: -15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #Cinema .slider .swiper-wrapper {
+        height: 200px;
+    }
+    #Cinema .slider h2 {
+        font-size: 20px;
+        margin-top: 60px;
+    }
+    #Cinema .slider h2 em {
+        font-size: 18px;
+    }
+    #Cinema .slider h2::after {
+        width: 190px;
+        bottom: -10px;
+    }
+}
+
+/* 컨테이너 패딩은 빼고, h2에 살짝만 마진을 줘서 위치 맞추기 */
+#Cinema .slider .swiper-slide .container {
+    max-width: 100%;
+    padding: 0; /* 패딩 초기화 */
+}
+
+#Cinema .slider h2 {
+    margin-left: 70px; /* 너무 밀렸으니 70px 정도로 살짝 줄이기 (필요하면 50~80px 사이로 조절) */
+}
+
+#Cinema {
+    scroll-margin-top: 80px;
+}
+
+#Cinema {
+    margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+    #Cinema {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    #Cinema {
+        margin-top: 35px;
+    }
+}

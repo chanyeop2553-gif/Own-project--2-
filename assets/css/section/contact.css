@@ -1,0 +1,122 @@
+#contact {
+    height: 100vh;
+}
+.contact_inner {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.contact_title {
+    color: var(--black100);
+    font-size: 8vw;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.3vw;
+    white-space: nowrap; /*글자가 아래로 떨아지지 않게*/
+}
+
+.contact_text {
+    position: relative;
+
+    width: 100%;
+    height: 40vh;
+    background-color: #b3b3b3;
+    background: url(../../img/batch_토왕성-폭포.jpg) center;
+    background-size: cover;
+    color: var(--white);
+    cursor: all-scroll;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact_text .text {
+    font-size: 3vw;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    z-index: 100;
+    transition: opacity 0.2s;
+}
+
+/* line */
+.contact_lines {
+    width: 100%;
+}
+.contact_lines .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 0.5vw;
+    background-color: var(--black100);
+    background: url(../../img/batch_토왕성-폭포.jpg) center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: none;
+}
+.contact_lines.bottom .line {
+    margin-top: 0.5vw;
+    display: block;
+}
+.contact_lines .line:nth-child(1) {
+    height: 1px;
+}
+.contact_lines .line:nth-child(2) {
+    height: 2px;
+}
+.contact_lines .line:nth-child(3) {
+    height: 5px;
+}
+.contact_lines .line:nth-child(4) {
+    height: 9px;
+}
+.contact_lines .line:nth-child(5) {
+    height: 13px;
+}
+.contact_lines .line:nth-child(6) {
+    height: 17px;
+}
+.contact_lines .line:nth-child(7) {
+    height: 25px;
+}
+.contact_lines.bottom .line:nth-child(1) {
+    height: 25px;
+    margin-top: 0.5vw;
+}
+.contact_lines.bottom .line:nth-child(2) {
+    height: 17px;
+}
+.contact_lines.bottom .line:nth-child(3) {
+    height: 13px;
+}
+.contact_lines.bottom .line:nth-child(4) {
+    height: 9px;
+}
+.contact_lines.bottom .line:nth-child(5) {
+    height: 5px;
+}
+.contact_lines.bottom .line:nth-child(6) {
+    height: 2px;
+}
+.contact_lines.bottom .line:nth-child(7) {
+    height: 1px;
+}
+@media (max-width: 800px) {
+    .contact_inner {
+        justify-content: center;
+    }
+    .contact_lines .line {
+        display: block;
+    }
+    .contact_text .text {
+        font-size: 24px;
+    }
+}

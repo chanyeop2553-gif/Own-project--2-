@@ -1,0 +1,175 @@
+#header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+.header_inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(129, 133, 139, 0.158);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* 경계선으로 시각적 안정감 부여 */
+}
+
+.header_logo {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.header_logo h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--black);
+}
+
+.header_logo em {
+    font-size: 11px;
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #e50914;
+}
+
+.header_nav {
+}
+
+.header_nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.header_nav ul li {
+}
+
+.header_nav ul li a {
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 14px;
+    position: relative;
+    color: var(--black);
+    transition: color 0.3s;
+}
+
+/* 🎬 [핵심 포인트] In-Room Cinema 전용 시네마틱 스타일 */
+.header_nav ul li a.nav_cinema {
+    font-weight: 700;
+    color: #e50914; /* 메가박스/시네마틱 레드 포인트 */
+    letter-spacing: -0.2px;
+}
+
+.header_nav ul li a.nav_cinema:hover {
+    color: #ff3b45;
+    text-shadow: 0 0 8px rgba(229, 9, 20, 0.3); /* 영화관 전광판 느낌의 살짝 맴도는 네온 효과 */
+}
+
+/* 오타 수정 및 밑줄 애니메이션 (100% - 28px 조절) */
+.header_nav ul li a::before {
+    content: "";
+    width: calc(100% - 28px);
+    height: 1px;
+    background-color: var(--black);
+    position: absolute;
+    left: 14px;
+    bottom: 6px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* 시네마 전용 메뉴 호버 밑줄은 레드 컬러로 대입 */
+.header_nav ul li a.nav_cinema::before {
+    background-color: #e50914;
+}
+
+.header_nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+.header_nav_mobile {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+.header_nav_mobile span {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--black);
+    margin-top: 19px;
+    position: relative;
+}
+.header_nav_mobile span::before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: var(--black);
+    position: absolute;
+    right: 0;
+    top: 6px;
+    transition: width 0.3s;
+}
+.header_nav_mobile span::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    transition: width 0.3s;
+}
+
+/* 📱 모바일 및 태블릿 매칭 (기준을 800px -> 1024px로 확장) */
+@media (max-width: 1024px) {
+    .header_nav_mobile {
+        display: block;
+    }
+    .header_nav {
+        display: none;
+    }
+    .header_nav.show {
+        display: block;
+    }
+    .header_nav.show ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 68px;
+        background-color: rgba(20, 20, 20, 0.92);
+        backdrop-filter: blur(20px);
+        padding: 20px 24px;
+        border-radius: 0 0 0 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    .header_nav.show ul li {
+        text-align: right;
+    }
+    .header_nav.show ul li a {
+        padding: 12px 0;
+        color: #ffffff;
+    }
+    .header_nav.show ul li a.nav_cinema {
+        color: #ff3b45;
+    }
+    .header_nav.show ul li a::before {
+        width: 100%;
+        left: 0px;
+        background-color: #ffffff;
+    }
+
+    .header_nav.show + .header_nav_mobile span::before {
+        width: 20px;
+    }
+    .header_nav.show + .header_nav_mobile span::after {
+        width: 20px;
+    }
+}

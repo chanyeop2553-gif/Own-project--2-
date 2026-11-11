@@ -1,0 +1,51 @@
+:root {
+    /* 폰트 */
+    --mainEng-font: "Montserrat";
+    --mainKor-font: "Pretendard";
+    --mainNum-font: "GMarketSans";
+
+    /* 메인 배경 */
+    --mainBg-color: #f4f1ea;
+
+    /* 서브 컬러 */
+    --subBg100: #e2ded4;
+    --subBg200: #d1ccc0;
+    --subBg300: #bfb8ac;
+    --subBg400: #aea497;
+    --subBg500: #9c9183;
+
+    /* 기본 컬러 */
+    --white: #fff;
+    --white100: #ffffff96;
+
+    --black: #000;
+    --black100: #2c221e;
+    --black200: #3f322d;
+    --black300: #52433d;
+    --black400: #e0e0e0;
+
+    /* 기본 폰트 설정 */
+    font-family: var(--mainEng-font), var(--mainKor-font);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    color: var(--black100);
+    background-color: var(--mainBg-color);
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}

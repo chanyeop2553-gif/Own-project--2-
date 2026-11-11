@@ -1,0 +1,44 @@
+/* 가운데영역 */
+.container {
+    width: 100%; /* 화면 폭에 맞게 유동적으로 조절 */
+    max-width: 1280px; /* PC 화면에서는 최대 1280px까지만 늘어남 */
+    margin: 0 auto; /* 정중앙 정렬 */
+    padding: 0 16px; /* 👈 양옆 벽에 바짝 붙지 않도록 기본 숨통(여백) 확보 */
+    box-sizing: border-box; /* 패딩이 폭을 늘리지 않도록 방어 */
+    position: relative;
+}
+
+/* 로우 영역 */
+.row {
+    padding: 0 16px;
+}
+
+/* 아이콘 스프라이트 */
+.icon {
+    background-image: url("../../icon/icon.png");
+    background-repeat: no-repeat;
+}
+
+/* 섹션 공통 간격 */
+:root {
+    --section-gap: 80px;
+    --section-gap-tablet: 55px;
+    --section-gap-mobile: 35px;
+}
+
+/* 섹션 간격 통일 */
+.section-gap {
+    margin-top: var(--section-gap);
+}
+
+@media (max-width: 768px) {
+    .section-gap {
+        margin-top: var(--section-gap-tablet);
+    }
+}
+
+@media (max-width: 480px) {
+    .section-gap {
+        margin-top: var(--section-gap-mobile);
+    }
+}
